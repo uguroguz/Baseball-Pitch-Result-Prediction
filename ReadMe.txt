@@ -1,8 +1,2 @@
-MSCBD- Baseball Pitch Prediction
-
-Hi this folder contains documents and codes about Baseball Pitch Prediction.
-Code folder contains all code that has been used during this project.
-Data contains finalized data and zip file of raw data.
-Documentation are here.
-
-
+Hi all,
+This is my thesis project. In this project, our aim was to predict baseball pitch results without excluding anomalies. To achieve this goal we have used R and Python programming languages. Various algorithms and features tested, based on these evaluations, we have created  MLP model that achieves 46% accuracy. 
