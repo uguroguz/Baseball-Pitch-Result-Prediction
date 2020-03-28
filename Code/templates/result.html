@@ -1,0 +1,35 @@
+{% extends "layout.html"%}
+
+{% block title %} Result Page {% endblock %}
+
+{% block content%}
+    <div class="jumbotron">
+      <h1 class="display-4">Result Prediction</h1>
+      <p class="lead">This is a Demo created for Thesis presentation.</p>
+      <hr class="my-4">
+      <p>The Accuracy Rate of the demo is 46%</p>
+    </div>
+    
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>Ball</th>
+            <th>Strike</th>
+            <th>Play</th>
+        </tr>
+        <tr>
+            <td>Predicted result</td>
+            {% for rs in result %}
+                <td>{{rs}}</td>
+            {% endfor %}
+        </tr>
+        
+        <tr>
+            <td>orginal result</td>       
+            {% for rg in origin %}
+                <td>{{rg}}</td>
+            {% endfor %}
+        </tr>
+    </table>
+    <br>
+{% endblock %}

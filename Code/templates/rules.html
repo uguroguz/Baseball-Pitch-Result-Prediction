@@ -1,0 +1,69 @@
+{% extends "layout.html"%}
+
+{% block title %} Rules {% endblock %}
+
+{% block content%}
+
+<div class ="row">
+    <div class = "col-md-12">
+        <h2>Rules</h2>
+         
+        <p>Part of rules that you need to know about baseball explained below.
+        If you are interested in all of the baseball rules you can
+        check it at <a href="https://content.mlb.com/documents/2/2/4/305750224/2019_Official_Baseball_Rules_FINAL_.pdf">Official Rule Book</a></p>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class = "col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" alt="..." src="{{ url_for('static',filename='images/img1.png')}}"> 
+            <div class="card-body">
+                <h5 class="card-title">Score Run</h5>
+                <p>Baseball is a game that played with 2 teams, 40 players with 9 players take the field at any one time.
+                The object of the game is to score more runs than the opposing team.
+                To score a run a player must hit the ball between the foul lines and run across three bases and back home.
+                A hit inside these lines is called as foul ball and batter is not allowed to run.</p>
+            </div> 
+        </div>
+    </div>
+    <div class = "col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" alt="..." src="{{ url_for('static',filename='images/img2.png')}}">
+            <div class="card-body">
+                <h5 class="card-title">Strike</h5>
+                <p>The pitchers job is to get batter out by throwing into strike zone.The strike zone is imaginary zone
+                that is between batters armpits and knees. If the pitcher throws throug this area its strike.</p>
+            </div>
+        </div>
+    </div>
+    <div class = "col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" alt="..." src="{{ url_for('static',filename='images/img3.png')}}">
+            <div class="card-body">
+                <h5 class="card-title">Ball</h5>
+                <p>The balls thrown outside of the strike zone called ball,if the batter swing and misses 
+                any ball it is also called strike. 3 strikes means batter is out. four balls against the batter and
+                he gets to walk to first base.There severeal diffrent ways for team to get player out.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>         
+</div>
+<br>
+<div class="row">
+    <div class="col-md-12">
+        <p>The game is played over 9 innings,3 outs made in the 1/2 of the inning,
+         ends the half of the inning. Other team gets to bat.
+         Once both teams are batted this is known as inning.</p>
+         <p> short cuts of the ball types listed below </p>
+         <p>CH - Changeup, CU - Curveball,EP - Eephus,FC - Cutter, FF - Fastball, FS - Splitter </p>
+         <p>KC - Knuckle curve, KN - Knuckeball, PO - Pitchout, SC - Screwball, SI - Sinker, SL - Slider</p>       
+    </div>
+</div>
+<br>
+<br>
+{% endblock %}
+
+
+

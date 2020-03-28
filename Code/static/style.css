@@ -1,0 +1,10 @@
+
+body {
+  background-image: url("images/background.jpg");
+  background-repeat: repeat;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+}

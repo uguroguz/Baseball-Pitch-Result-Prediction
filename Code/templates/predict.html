@@ -1,0 +1,127 @@
+{% extends "layout.html"%}
+
+{% block title %} Predict {% endblock %}
+
+
+
+{% block content%}
+
+<h3>Predict what will happen in given situation</h3>
+<p>Table contains 10 test set in form below you can enter either index number, or enter random values
+to make prediction</p>
+<hr>
+<h4>Enter Index number from sample test-set to see the prediction result</h4>
+<br>
+<form action="#" method="post">
+    <div class="form-row align-items-center">
+        <div class="col-auto">
+            <label class="sr-only" for="Index">Index Number</label>
+            <input type="text" class="form-control mb-2" id="Index" name="index" placeholder="Index Number">
+        </div>
+        <div class="col-auto">
+          <button type="submit" name="submit" value="1" class="btn btn-primary mb-2">Submit</button>
+        </div>
+    </div>
+</form>
+<hr>
+<h4>Predict game situation </h4>
+<br>
+<form action="#" method="post">
+    <div class="row">
+        <div class="form-group col-md-3">
+          <label for="Inning">Inning</label>
+          <select id="Inning" name="Inning" class="form-control">
+            <option selected>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>            
+          </select>
+        </div>
+        <div class="col-md-3">
+            <label for="p_score" class="col-form-label">Pitcher Team Score</label>            
+            <input type="text" class="form-control" id="p_score" name="p_score">            
+        </div>
+        <div class="form-group col-md-3">
+            <label for="b_score" class=" col-form-label">Batter Team Score</label>                
+            <input type="text" class="form-control" id="b_score" name="b_score">                
+        </div>
+        <div class="form-group col-md-3">
+            <label for="outs" class="col-form-label">Batter Outs</label>                
+            <input type="text" class="form-control" id="outs" name="outs">                
+        </div>
+    </div>
+    <div class="form-group row align-items-center">        
+        <div class="form-group col-md-3">
+            <label for="p_num" class="col-form-label">pitch number against the batter(current inning)</label>
+            <input type="text" class="form-control" id="p_num" name="p_num">                
+        </div>
+        <div class="form-group col-md-3">
+            <label>Loaded Bases</label><br>
+            <input type="checkbox" name="base" value="1">Base 1<br>      
+            <input type="checkbox" name="base" value="2">Base 2<br>      
+            <input type="checkbox" name="base" value="3">Base 3<br>      
+        </div>
+         <div class="form-group col-md-3">
+            <label for="spin_rate" class="col-form-label">spin rate</label>
+            <input type="text" class="form-control" id="spin_rate" name="spin_rate">                
+        </div>
+        <div class="form-group col-md-3">
+            <label for="spin_dir" class="col-form-label">spin direction</label>
+            <input type="text" class="form-control" id="spin_dir" name="spin_dir">               
+        </div>
+    </div>
+    <div class="form-group row">        
+        <div class="form-group col-md-3">
+            <label for="start speed" class="col-form-label">start speed</label>                
+            <input type="text" class="form-control" id="start_speed" name="start_speed">
+            
+        </div>
+        <div class="form-group col-md-3">
+            <label for="end speed" class="col-form-label">end speed</label>                
+            <input type="text" class="form-control" id="end speed" name="end_speed">                
+        </div>
+        <div class="form-group col-md-3">
+            <label for="Game_pt_pCount" class="col-form-label">Pitch Count in Game</label>                
+            <input type="text" class="form-control" id="Game_pt_pCount" name="Game_pt_pCount">                
+        </div>
+        <div class="form-group col-md-3">
+            <label for="Game_pt_t_s" class="col-form-label">Strike Count in Game</label>                
+            <input type="text" class="form-control" id="Game_pt_t_s" name="Game_pt_t_s">                
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="form-group col-md-3">
+          <label for="pt">Pitch Type</label>
+          <select id="pt" name="pt" class="form-control">
+              {% for p in pt%}
+              <option>{{p}}</option>
+              {% endfor %}              
+          </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        {% for p in pt%}
+            <div class="form-group col-md-3">
+                <label for="{{p}}" class="col-form-label">total {{p}}</label>                
+                <input type="text" class="form-control" id="{{p}}" name="{{p}}"> 
+            </div>
+        {% endfor %}  
+    </div>
+    
+    <button type="submit" name="submit" value="2" class="btn btn-primary">Predict</button>
+</form>
+<hr>
+<h4>Test Table</h4>
+<br>
+<div class="table-responsive">
+    {{tables | safe}}
+   
+</div>
+
+{% endblock %}
+
